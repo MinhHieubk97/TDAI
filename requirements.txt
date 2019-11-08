@@ -1,0 +1,5 @@
+Flask==1.1.1
+Flask-Bcrypt
+Flask-JWT-Extended
+Flask-RESTful
+pymongo
