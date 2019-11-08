@@ -32,4 +32,4 @@ def register_router(app):
     from server.controllers.user_controller import UserController_Register
 
     api.add_resource(UserController_Register, '/users/register')
-    api.add_resource(UserController_Register, '/users/login')
+    # api.add_resource(UserController_Login, '/users/login')
