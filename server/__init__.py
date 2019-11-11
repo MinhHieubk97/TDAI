@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_bcrypt import Bcrypt
+from flask_cors import CORS
 from flask_jwt_extended import JWTManager
 from flask_pymongo import PyMongo
 from flask_restful import Api
@@ -9,6 +10,7 @@ from server.config import config_by_name
 mongo = PyMongo()
 bcrypt = Bcrypt()
 jwt = JWTManager()
+cors = CORS()
 
 
 def create_app(config_name='dev'):
@@ -25,6 +27,7 @@ def initialize_extensions(app):
     mongo.init_app(app)
     bcrypt.init_app(app)
     jwt.init_app(app)
+    cors.init_app(app)
 
 
 def register_router(app):
